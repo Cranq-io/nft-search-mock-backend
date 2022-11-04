@@ -47,9 +47,9 @@ const sampleAnswer = {
 }
 
 app.post('/search', (req, res) => {
-    res.send(JSON.stringify([sampleAnswer, sampleAnswer, sampleAnswer]))
+    res.send([sampleAnswer, sampleAnswer, sampleAnswer])
 })
 
-const listener = app.listen(port, () => {
+app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
 })
